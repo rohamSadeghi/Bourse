@@ -1,6 +1,6 @@
-##About Hami bourse
+##About hh
 
-####Hami bourse is a project that let people read articles about bourse indicators.
+####Hh is a project that let people read articles about bourse indicators.
 ```
 
 
