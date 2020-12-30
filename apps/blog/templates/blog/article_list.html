@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block header %}
+    <title>{{ category.title }}</title>
+    <meta name="description" content="{{ category.description }}">
+{% endblock %}
+
+{% block content %}
+    <h1>{{ category.title }}</h1>
+
+    {% if category.children %}
+        {% for sub_cat in category.children.all %}
+            <div>
+            <h2 class="sub-category"><a href="{{ sub_cat.get_absolute_url }}" title="{{ sub_cat.title }}">{{ sub_cat.title }}</a></h2>
+            {% include "blog/_article_list.html" with article_list=sub_cat.articles.all|slice:":12" only %}
+            </div>
+        {% endfor %}
+    {% else %}
+        {% include "blog/_article_list.html" with article_list=page_obj only %}
+    {% endif %}
+    <div class="pagination">
+        {% for p in  page_range %}
+            <a href="{{ request.path }}?page={{ p }}">{{ p }}</a>
+        {% endfor %}
+    </div>
+{% endblock %}

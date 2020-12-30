@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load json_ld %}
+
+{% block header %}
+    <title>{{ object.title }}</title>
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="description" content="{{ object.summary }}">
+    <meta name="author" content="{{ object.profile.full_name }}">
+    {% render_json_ld object.sd %}
+{% endblock %}
+
+{% block content %}
+    <div class="content-info" >
+        <span class="views">{{ object.views_count }}</span>
+    </div>
+    <article>
+        <h1 class="article-title">{{ object.title }}</h1>
+        <h3 class="article-author">{{ object.profile.full_name }}</h3>
+        <img src="{{ object.image.url }}" alt="{{ object.title }}">
+        {% if object.video_url %}
+            <video controls="controls" height="300" poster="" width="400">
+                <source src="{{ object.video_url }}">Your browser doesn't support video.<br>
+                Please download the file: <a href="{{ object.video_url }}">video/mp4</a>
+            </video>
+        {% endif %}
+        <p class="article-summary">{{ object.summary }}</p>
+        <div class="article-body">{% autoescape off %}{{ object.content }}{% endautoescape %}</div>
+        <ul class="article-namads">
+            {% for namad in object.namads.all %}
+                <li>{{ namad.name }}</li>
+            {% endfor %}
+        </ul>
+        <span class="article-published-time">{{ object.approved_time }}</span>
+        <span class="article-jalali-published-time">{{ object.jalali_published_time }}</span>
+    </article>
+
+    <div itemprop="aggregateRating" itemscope itemtype="schema/AggregateRating">
+            Rated <span itemprop="ratingValue">{{ object.rating_avg }}/5</span>
+            based on <span itemprop="reviewCount">{{ object.rating_count }}</span> customer reviews
+    </div>
+
+    <div>
+        <span>Comments</span>
+        <span class="comments-count">{{ comments.count }}</span>
+        {% for cmt in comments %}
+            <span class="comment-author">{{ cmt.get_full_name }}</span>
+            <p class="article-comment">{{ cmt.content }}</p>
+            <span class="comment-published-time">{{ cmt.approved_time }}</span>
+            <span class="comment-jalali-published-time">{{ cmt.jalali_published_time }}</span>
+        {% endfor %}
+    </div>
+
+{% endblock %}

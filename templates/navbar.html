@@ -1,0 +1,18 @@
+<nav>
+
+        <ul>
+            <li><a href="{% url 'home' %}">صفحه اصلی</a></li>
+            {%  for cat in nav_categories %}
+                <li><a href="{{ cat.category.get_absolute_url }}" title="{{ cat.category.title }}">{{ cat.category.title }}</a>
+                {% if cat.subs %}
+                    <ul>
+                    {% for sub_cat in cat.subs %}
+                        <li><a href="{{ sub_cat.category.get_absolute_url }}" title="{{ sub_cat.category.title }}">{{ sub_cat.category.title }}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+
+</nav>

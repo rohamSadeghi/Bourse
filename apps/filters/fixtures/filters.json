@@ -1,0 +1,270 @@
+[
+{
+  "model": "filters.filtercategory",
+  "pk": 1,
+  "fields": {
+    "created_time": "2020-12-05T16:36:36.714",
+    "updated_time": "2020-12-09T12:27:54.632",
+    "title": "فیلترهای عمومی",
+    "slug": "فیلترهای-عمومی",
+    "is_free": true,
+    "image": "filters/categories/632134-icons-022.svg",
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.filtercategory",
+  "pk": 2,
+  "fields": {
+    "created_time": "2020-12-05T16:36:36.714",
+    "updated_time": "2020-12-09T12:22:10.464",
+    "title": "خرید و فروش های مشکوک",
+    "slug": "خرید-و-فروش-های-مشکوک",
+    "is_free": false,
+    "image": "filters/categories/464270-icons-011.svg",
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.filtercategory",
+  "pk": 3,
+  "fields": {
+    "created_time": "2020-12-07T09:36:54.457",
+    "updated_time": "2020-12-09T12:20:44.930",
+    "title": "سهم های مورد توجه حقیقی",
+    "slug": "سهم-های-مورد-توجه-حقیقی",
+    "is_free": false,
+    "image": "filters/categories/930308-icons-055.svg",
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.filtercategory",
+  "pk": 4,
+  "fields": {
+    "created_time": "2020-12-07T09:37:34.466",
+    "updated_time": "2020-12-09T12:25:00.905",
+    "title": "شکار نوسانی",
+    "slug": "شکار-نوسانی",
+    "is_free": false,
+    "image": "filters/categories/905804-icons-033.svg",
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 3,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.123",
+    "updated_time": "2020-11-18T10:02:59.123",
+    "title": "برترین های تقاضا",
+    "filter_code": "taqaza_bartar",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 4,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.130",
+    "updated_time": "2020-11-18T10:02:59.130",
+    "title": "برترین های عرضه",
+    "filter_code": "arzeh_bartar",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 5,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.134",
+    "updated_time": "2020-11-18T10:02:59.135",
+    "title": "نمادهای در آستانه صف خرید",
+    "filter_code": "saf_kharid",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 6,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.137",
+    "updated_time": "2020-11-18T10:02:59.137",
+    "title": "نمادهای در آستانه صف فروش",
+    "filter_code": "saf_foroush",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 7,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.139",
+    "updated_time": "2020-11-18T10:02:59.139",
+    "title": "درشت ترین خریداران حقیقی",
+    "filter_code": "kharid_haqiqi",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 8,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.141",
+    "updated_time": "2020-11-18T10:02:59.141",
+    "title": "درشت ترین فروشندگان حقیقی",
+    "filter_code": "foroush_haqiqi",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 9,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.143",
+    "updated_time": "2020-11-18T10:02:59.143",
+    "title": "بیشترین نسبت های سرانه خرید به فروش حقیقی",
+    "filter_code": "foroush_bishtar",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 10,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.145",
+    "updated_time": "2020-11-18T10:02:59.145",
+    "title": "کمترین نسبت های سرانه خرید به فروش حقیقی",
+    "filter_code": "foroush_kamtar",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 11,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.147",
+    "updated_time": "2020-11-18T11:47:46.344",
+    "title": "کد به کد حقوقی به حقیقی",
+    "filter_code": "cbc_hoqouqi",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 12,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.148",
+    "updated_time": "2020-11-18T10:02:59.148",
+    "title": "کد به کد حقیقی به حقوقی",
+    "filter_code": "cbc_haqiqi",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 13,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.151",
+    "updated_time": "2020-11-18T10:02:59.151",
+    "title": "سهم های شارپی",
+    "filter_code": "sharpi",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 14,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.152",
+    "updated_time": "2020-12-06T08:24:19.577",
+    "title": "گروه های پر تقاضا",
+    "filter_code": "por_taqaza",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 15,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.154",
+    "updated_time": "2020-12-06T08:24:13.213",
+    "title": "رنج مثبت",
+    "filter_code": "range_mosbat",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 16,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.156",
+    "updated_time": "2020-12-06T08:24:04.613",
+    "title": "حجم های مشکوک",
+    "filter_code": "hajm_mashkouk",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 17,
+  "fields": {
+    "created_time": "2020-11-18T10:02:59.158",
+    "updated_time": "2020-12-05T16:36:54.705",
+    "title": "بیشترین حجم امروز به 30 روز",
+    "filter_code": "hajm_emrouz",
+    "category": 1,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 18,
+  "fields": {
+    "created_time": "2020-12-07T12:15:55.483",
+    "updated_time": "2020-12-07T12:15:55.483",
+    "title": "شکار نوسانی",
+    "filter_code": "shekar_navasani",
+    "category": 4,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 19,
+  "fields": {
+    "created_time": "2020-12-07T12:16:41.978",
+    "updated_time": "2020-12-07T12:16:41.978",
+    "title": "سهم های مورد توجه حقیقی",
+    "filter_code": "tavajoh_haqiqi",
+    "category": 3,
+    "is_enable": true
+  }
+},
+{
+  "model": "filters.signalfilter",
+  "pk": 20,
+  "fields": {
+    "created_time": "2020-12-07T12:24:17.464",
+    "updated_time": "2020-12-07T12:24:17.464",
+    "title": "خرید و فروش های مشکوک",
+    "filter_code": "kharid_forosh_mashkouk",
+    "category": 2,
+    "is_enable": true
+  }
+}
+]

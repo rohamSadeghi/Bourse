@@ -1,0 +1,9 @@
+{% for article in article_list %}
+<article>
+    <h4 class="article-title"><a href="{{ article.get_absolute_url }}" title="{{ article.title }}">{{ article.title }}</a></h4>
+    <img src="{{ article.image.url }}" alt="{{ article.title }}">
+    <p class="article-summary">{{ article.lead }}</p>
+    <span class="article-published-time">{{ article.approved_time }}</span>
+    <span class="article-jalali-published-time">{{ article.jalali_published_time }}</span>
+</article>
+{% endfor %}

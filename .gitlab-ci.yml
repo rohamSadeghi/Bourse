@@ -1,0 +1,8 @@
+include: "http://gitlab.yourblueapi.com/gitlab-ci.yml"
+
+variables:
+  PROJECT_DIR: "hami_bourse"
+
+.deploy:
+  after_script:
+    - supervisorctl restart $PROJECT_DIR-asgi:*

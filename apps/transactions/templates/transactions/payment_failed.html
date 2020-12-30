@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hami Bourse</title>
+  <link rel="stylesheet" href="{% static 'hami_bourse/css/style.css' %}">
+</head>
+<body style="direction: rtl; text-align: center">
+<div class="payment_done">
+  <h2> متاسفانه پرداخت شما با موفقیت انجام نشد! چنانچه از حساب شما مبلغی کسر شده است، حداکثر تا ۷۲ ساعت آینده به حساب شما باز می گردد.</h2>
+  <img src="{% static 'hami_bourse/image/paydone.svg' %}" alt="done"/>
+  <br>
+  <button><a href="{{ redirect_url }}">بازگشت به سایت</a></button>
+
+</div>
+</body>
+</html>

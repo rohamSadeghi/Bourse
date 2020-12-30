@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>گروه آموزشی حامی بورس</h1>
+{%  for cat in categories %}
+    <div>
+    <h2 class="category"><a href="{{ cat.category.get_absolute_url }}" title="{{ cat.category.title }}">{{ cat.category.title }}</a></h2>
+
+    {% if cat.subs %}
+        {% for sub_cat in cat.subs %}
+            <div>
+            <h3 class="sub-category"><a href="{{ sub_cat.category.get_absolute_url }}" title="{{ sub_cat.category.title }}">{{ sub_cat.category.title }}</a></h3>
+            {% include "blog/_article_list.html" with article_list=sub_cat.articles only %}
+            </div>
+        {% endfor %}
+    {% else %}
+        {% include "blog/_article_list.html" with article_list=cat.articles only %}
+    {% endif %}
+    </div>
+{% endfor %}
+{% endblock %}
